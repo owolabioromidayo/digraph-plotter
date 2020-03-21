@@ -1,6 +1,7 @@
 import tkinter as tk
 from classes.node import Node
 from classes.fillnode import FillNode
+from classes.node_choice import NodeChoice
 
 
 """Creates the main app window"""
@@ -56,7 +57,7 @@ class MainWindow:
       
         for node in self.nodes:
             if x  in range(node.x-60,node.x+60) and y in range(node.y-30, node.y+30):
-                FillNode(self, node)
+                NodeChoice(self, node)
            
 
         else:
