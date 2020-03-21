@@ -26,6 +26,8 @@ class MainWindow:
         self.root.geometry(f"{self.width}x{self.height}")
         self.root.resizable(width=False, height=False)
         
+        
+        
 
         #Partition window into button and graph frames
         self.buttons_frame = tk.Frame(self.root, height=self.height, width=100, bg='gray')
@@ -49,7 +51,7 @@ class MainWindow:
 
 
     def make_node_event(self,event):
-        """Creates a node on left mouse click if no node available in area"""
+        """make_node event handler"""
         x = event.x
         y = event.y
 
@@ -78,6 +80,10 @@ class MainWindow:
 
 
         self.nodes.append(newnode)
+
+
+
+
 
 
 

@@ -8,21 +8,26 @@ class NodeChoice:
 
         #Make window
         self.root = tk.Tk()
-        self.root.title('')
+        self.root.title('Current Node Options')
+        self.root.bind('<Return>', self.on_enter) 
         self.label = tk.Label(self.root, text="Make a Choice")
-        self.label.grid(row=0,column=0)
+        self.label.grid(row=0,column=0, pady=10, padx=10)
 
         
 
-        self.choice = tk.StringVar(self.root)
-        self.choice.set("link") # default value
+        self.choice = tk.IntVar(self.root)
+    
 
-        self.options = tk.OptionMenu(self.root, self.choice, "link", "rename")
-        self.options.grid(row=1,column=0, padx=0, pady=5)
+        self.rbtn1 = tk.Radiobutton(self.root, text="Link", variable=self.choice, value=0)
+        self.rbtn1.grid(row=1,column=0)
 
-        self.options.bind('<Return>', self.on_enter) 
+
+        self.rbtn2 = tk.Radiobutton(self.root, text="Rename", variable=self.choice, value=1)
+        self.rbtn2.grid(row=2, column=0)
+
+        
         self.button = tk.Button(self.root, text='Confirm',command=self.on_button_press)
-        self.button.grid(row=2,column=0,pady=10)
+        self.button.grid(row=3,column=0,pady=10)
         self.root.mainloop()
 
 
@@ -30,7 +35,7 @@ class NodeChoice:
         self.choice = self.choice.get()
         self.root.destroy()
 
-        if self.choice == "rename":
+        if self.choice == 1:
             FillNode(self.parent, self.node)
 
         else:
