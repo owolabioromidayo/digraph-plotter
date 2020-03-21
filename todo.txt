@@ -1,0 +1,1 @@
+node selection actions, info change and add new vertex
