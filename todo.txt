@@ -1,0 +1,7 @@
+set borders for node creation
+refactor and optimize
+FORM INPUT METHOD 2
+change the coord system or interprete written coords? 
+make coord system, make 00 center, window size should conform to graph,
+input coord by typing option, pass adjacency list or matrix 
+
