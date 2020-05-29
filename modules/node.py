@@ -2,11 +2,11 @@ import tkinter as tk
 
 
 class Node:
-    def __init__(self, x, y, prevnode):
+    def __init__(self, x, y, prevnode=None, message=None):
         self.x = x
         self.y = y
         self.prevnode = prevnode
-        self.message = None
+        self.message = message
 
     def create_link(self, graph):
         """Links nodes"""

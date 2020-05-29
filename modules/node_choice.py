@@ -46,6 +46,7 @@ class NodeChoice:
 
         else:
             # on choice makenode
+            # idx = self.parent.nodes.idx(self.node)
             self.parent.nodes.remove(self.node)
             self.parent.nodes.append(self.node)
 
